@@ -1,10 +1,13 @@
 ---
 name: Bug report
-about: Report a reproducible RG SP issue
+about: Report a reproducible RG SP issue caused by this fork's own changes
 title: ''
 labels: bug
 assignees: ''
 ---
+
+> This is a personal, vibe-coded fork. If the problem also happens on an upstream
+> DS Style build, report it at https://github.com/FrankieT19/rg-sp-ds-style/issues instead.
 
 **Device and firmware**
 RG SP; stock/mod version; SD1/SD2 installation; DS Style version:

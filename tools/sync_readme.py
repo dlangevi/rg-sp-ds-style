@@ -4,9 +4,13 @@ import re
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = 'https://github.com/FrankieT19/rg-sp-ds-style'
+REPO = 'https://github.com/dlangevi/rg-sp-ds-style'
+UPSTREAM = 'https://github.com/FrankieT19/rg-sp-ds-style'
 
 def render_readme(markdown):
+    # Flatten GitHub alert blockquotes (the fork notice) into plain paragraphs.
+    markdown = re.sub(r'(?m)^> \[![A-Z]+\]\n', '', markdown)
+    markdown = re.sub(r'(?m)^>[ ]?', '', markdown)
     # Share installation text, but omit repository-only guidance from the bundle.
     markdown = markdown.replace('## Source, credits and contributing', '## Credits')
     markdown = re.sub(r'(?m)^This repository includes[^\n]*\n\n', '', markdown)
@@ -34,10 +38,12 @@ def render_readme(markdown):
             indent = '   ' if re.match(r'^\d+\. ', line) else '  ' if line.startswith('- ') else ''
             lines.extend(textwrap.wrap(line, width=78, subsequent_indent=indent, break_long_words=False, break_on_hyphens=False))
     body = re.sub(r'\n{3,}', '\n\n', '\n'.join(lines)).strip()
-    return ('DS Style for RG SP - v1.1\n'
-            '========================\n\n'
+    return ('DS Style for RG SP - v1.1 (personal fork)\n'
+            '=========================================\n\n'
             'Thanks for downloading DS Style for RG SP!\n\n' + body +
-            '\n\nUpdates and support: ' + REPO + '\n\nEnjoy DS Style!\n')
+            '\n\nThis build is a personal fork: ' + REPO +
+            '\nOriginal project, updates and support: ' + UPSTREAM +
+            '\n\nEnjoy DS Style!\n')
 
 def sync_readme():
     text = render_readme((ROOT/'README.md').read_text(encoding='utf-8'))

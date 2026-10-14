@@ -1,7 +1,23 @@
-DS Style for RG SP - v1.1
-========================
+DS Style for RG SP - v1.1 (personal fork)
+=========================================
 
 Thanks for downloading DS Style for RG SP!
+
+This is a personal, unofficial fork. It is not DS Style.
+
+Everything good here is FrankieT19/rg-sp-ds-style
+(https://github.com/FrankieT19/rg-sp-ds-style); everything broken here is
+mine. This fork exists so I can hack on my own RG SP.
+
+Changes in this fork are vibe coded: written largely by an LLM, reviewed by
+one person, and tested on exactly one handheld. Treat them as experiments, not
+as a product. There is no roadmap, no support, and no promise that anything
+lands upstream.
+
+No releases are published here. If you want DS Style, get it from upstream's
+releases (https://github.com/FrankieT19/rg-sp-ds-style/releases/latest). If
+you build this fork and something goes wrong, that is on this fork, not on
+upstream: please do not open issues against FrankieT19 for it.
 
 DS Style is a Nintendo DS-inspired launcher originally made for the GBA. This
 port brings the feel of original hardware to the Anbernic RG SP.
@@ -13,8 +29,11 @@ For the RG SP running stock OS.
 
 DOWNLOAD AND INSTALL
 
-1. Download DS-Style-RG-SP-v1.1.zip from Releases
-   (https://github.com/FrankieT19/rg-sp-ds-style/releases/latest).
+1. Build the package yourself  -  see building and testing
+   (https://github.com/dlangevi/rg-sp-ds-style/blob/main/docs/BUILDING.md). It
+   writes dist/DS-Style-RG-SP-v1.1.zip. (This fork publishes no release
+   downloads; for a prebuilt package use upstream's releases
+   (https://github.com/FrankieT19/rg-sp-ds-style/releases/latest).)
 2. Extract the ZIP. Copy its Roms folder to your RG SP SD card's root, merging
    with your existing Roms folder.
 3. Optionally set your username by editing Roms > APPS > DSStyle >
@@ -87,9 +106,13 @@ If an autoboot installation cannot open, create an empty file named DISABLED
 (no extension) inside Roms/APPS/DSStyle on the card. The next boot skips DS
 Style. Keep the installation present, launch it manually from stock Apps and
 disable Autoboot before removing it. More on stock integration and recovery
-(https://github.com/FrankieT19/rg-sp-ds-style/blob/main/docs/STOCK-INTEGRATION.md).
+(https://github.com/dlangevi/rg-sp-ds-style/blob/main/docs/STOCK-INTEGRATION.md).
 
 CREDITS
+
+Original work: FrankieT19, rg-sp-ds-style
+(https://github.com/FrankieT19/rg-sp-ds-style). This fork tracks that
+repository and adds personal changes on top.
 
 Filter credits: Gigaherz and jdgleaver (lcd1x inspiration), and Matt Akins
 (Pixel Transparency). Notices are in DSStyle/licenses.
@@ -97,6 +120,7 @@ Filter credits: Gigaherz and jdgleaver (lcd1x inspiration), and Matt Akins
 Project code is Apache-2.0; third-party components and artwork retain their
 own licences.
 
-Updates and support: https://github.com/FrankieT19/rg-sp-ds-style
+This build is a personal fork: https://github.com/dlangevi/rg-sp-ds-style
+Original project, updates and support: https://github.com/FrankieT19/rg-sp-ds-style
 
 Enjoy DS Style!

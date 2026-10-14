@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: DS Style bugs (upstream)
+    url: https://github.com/FrankieT19/rg-sp-ds-style/issues
+    about: >-
+      This repository is a personal, unofficial, vibe-coded fork. Bugs in DS Style itself
+      belong upstream. Only open an issue here if you are reporting something specific to
+      this fork's own changes.
